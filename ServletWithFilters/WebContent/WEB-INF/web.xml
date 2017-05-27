@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>ServletWithFilters</display-name>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+
+	<servlet>
+		<servlet-name>myservlet</servlet-name>
+		<servlet-class>online.mrwallet.www.servlet.MyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>myservlet</servlet-name>
+		<url-pattern>/myservlet</url-pattern>
+	</servlet-mapping>
+
+<!-- Here filter name its class and the initial parameters we want to send in the init() method are declared here:  -->
+	<filter>
+		<filter-name>myFilter</filter-name>
+		<filter-class>online.mrwallet.www.filter.MyFilter</filter-class>
+		<init-param>
+			<param-name>filterParam</param-name>
+			<param-value>filter param value</param-value>
+		</init-param>
+	</filter>
+	
+	<!-- Then the filter name is mapped to a URL, which when be called filter class;s doFilter() will execute first before ging to a servlet.  -->
+	<filter-mapping>
+		<filter-name>myFilter</filter-name>
+		<url-pattern>/myservlet</url-pattern>
+	</filter-mapping>
+</web-app>
