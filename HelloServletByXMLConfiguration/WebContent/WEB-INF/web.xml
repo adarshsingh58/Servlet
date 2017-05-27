@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>HelloServletByXMLConfiguration</display-name>
+<!-- this index.html is the default file to be called when our website is hit  -->
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+ <!--  
+  This tag registers a servlet into Server with a name 
+  <servlet>
+  <servlet-name>MyHelloServlet</servlet-name>This is a name you give to your Servlet so that you can associate a URL patetrn to this servlet referring to this nam 
+  <servlet-class>online.mrwallet.www.servlets.HelloServlet</servlet-class>Fully classifeid name of teh Servlet Class who is assigned the name 
+  </servlet>
+  
+  This tag associate the servlet with a URL pattern 
+  <servlet-mapping>
+  <servlet-name>MyHelloServlet</servlet-name>Name of the Servlet you want to map URL for. This name is the name you gave above in <servlet-name> 
+  <url-pattern>/myhelloservletpath</url-pattern>When user access this Url pattern he will be taken to the Servlet associated with the servlet name provided with this URL pattern
+  </servlet-mapping> -->
+  
+    <servlet>
+  	<servlet-name>MyServletName</servlet-name>
+  	<servlet-class>online.mrwallet.www.servlets.HelloServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MyServletName</servlet-name>
+  <url-pattern>/myservletpath</url-pattern>
+  </servlet-mapping>
+  
+</web-app>
