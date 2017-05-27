@@ -4,6 +4,8 @@
 
 .Check 'create web.xml' option while Project creation
 
+.Add Apache or any other Server at runtime in Properties>Project Facet to enable Servlet Libraries
+
 Java Servlets: Java Servlets are Java classes run by a web server that has an interpreter that supports the Java Servlet specification.
 Servlet LIfe Cycle:
 ⦁	init()
