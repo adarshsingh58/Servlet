@@ -6,3 +6,7 @@ tags to let Server know its a servlet.For that we do the following:
 
 And that is it. With Annotation that is all we  need. 
 Just one annotation with URL pattern. Now if you run the servlet you can seethe response.
+
+Also for Filters, we can use:
+>@WebFilter(urlPatterns="/hello.htm")
+before Filter class name.
